@@ -1,0 +1,87 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600&display=swap');
+
+
+/*
+  CSS Reset
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.hidden{
+  display: none;
+}
+
+/* 
+  End of CSS Reset
+*/
+
+
+:root{
+  --color-background: hsl(300, 1%, 20%);
+  --color-main-text: hsl(37, 63%, 83%); 
+
+
+  --font-header: 'Hahmlet', serif;
+  --font-header2: 'Vollkorn', serif;
+  --font-body: 'Quicksand', sans-serif;
+
+  --font-weight-light: 400;
+  --font-weight-medium: 500;
+  --font-weight-heavy: 600;
+
+  --color-yellow: hsl(44, 100%, 66%);
+  --color-teal: hsl(163, 26%, 58%);
+  --color-blue: hsl(206, 47%, 59%);
+  --color-gray-100: hsl(210, 15%, 20%);
+  --color-brown: hsl(330, 2%, 20%);
+}
+
+body{
+  background-color: var(--color-background);
+  color: var(--color-main-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-position: calc(50% - 1140px) center;
+  max-width: 500px;
+  border: 1px solid #4e4b4d;
+  /* background-image: url(//github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-teletype-graphic-cf60b66bbb2b00e1e4e9f8020b9fa59b6084d77ed4c7a3c4e0cdab5848aabca7.svg); */
+}
+.compare-container{
+  
+  
+}
+
+.compare-container.one{
+
+}
