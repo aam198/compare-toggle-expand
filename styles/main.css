@@ -56,6 +56,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --color-yellow: hsl(44, 100%, 66%);
   --color-teal: hsl(163, 26%, 58%);
   --color-blue: hsl(206, 47%, 59%);
+  --color-red: hsl(11, 71%, 44%);
   --color-gray-100: hsl(210, 15%, 20%);
   --color-brown: hsl(330, 2%, 20%);
 }
@@ -66,6 +67,10 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+   background-image: url(//github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-teletype-graphic-cf60b66bbb2b00e1e4e9f8020b9fa59b6084d77ed4c7a3c4e0cdab5848aabca7.svg); 
+   background-position: calc(50% - 1140px) center;
+   background-repeat: no-repeat;
 }
 .wrapper {
   display: flex;
@@ -75,13 +80,17 @@ body{
   background-position: calc(50% - 1140px) center;
   max-width: 500px;
   border: 1px solid #4e4b4d;
-  /* background-image: url(//github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-teletype-graphic-cf60b66bbb2b00e1e4e9f8020b9fa59b6084d77ed4c7a3c4e0cdab5848aabca7.svg); */
+  border-radius: 8px;
+  padding: 32px;
 }
 .compare-container{
-  
-  
+  margin-bottom: 32px;
+  width: 100%;
+  position: relative;
 }
 
-.compare-container.one{
-
+.btn{
+  border-radius: 5px;
+  cursor: pointer;
 }
+
