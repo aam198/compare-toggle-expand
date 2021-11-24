@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600&display=swap');
 
-
 /*
   CSS Reset
 */
@@ -44,7 +43,6 @@ p, h1, h2, h3, h4, h5, h6 {
   --color-background: hsl(300, 1%, 20%);
   --color-main-text: hsl(37, 63%, 83%); 
 
-
   --font-header: 'Hahmlet', serif;
   --font-header2: 'Vollkorn', serif;
   --font-body: 'Quicksand', sans-serif;
@@ -59,6 +57,9 @@ p, h1, h2, h3, h4, h5, h6 {
   --color-red: hsl(11, 71%, 44%);
   --color-gray-100: hsl(210, 15%, 20%);
   --color-brown: hsl(330, 2%, 20%);
+
+  --yellow-hover: hsl(39, 72%, 53%);
+  --teal-hover: hsl(158, 11%, 45%);
 }
 
 body{
@@ -72,6 +73,7 @@ body{
    background-position: calc(50% - 1140px) center;
    background-repeat: no-repeat;
 }
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -83,14 +85,53 @@ body{
   border-radius: 8px;
   padding: 32px;
 }
+
 .compare-container{
   margin-bottom: 32px;
   width: 100%;
   position: relative;
 }
 
-.btn{
-  border-radius: 5px;
-  cursor: pointer;
+.compare-container h2{
+  padding-bottom: 0.5rem;
+  font-family: var(--font-header2);
+  font-size: 2rem;
 }
 
+.compare-container img{
+  display: block;
+  width: 100%;
+}
+
+.button-wrapper{
+  display: flex;
+  gap: 1rem;
+}
+
+.btn{
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: var(--font-body);
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  border: 0;
+}
+
+.toggle{
+  background-color: var(--color-yellow);
+}
+.toggle:hover{
+  background-color: var(--yellow-hover);
+  transition: background-color 2s ease-in-out;
+}
+.expand{
+  background-color: var(--color-teal);
+}
+.expand:hover{
+  background-color: var(--teal-hover);
+  transition: background-color 2s ease-in-out;
+}
