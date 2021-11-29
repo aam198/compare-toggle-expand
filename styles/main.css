@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600&display=swap');
 
 /*
@@ -43,8 +43,8 @@ p, h1, h2, h3, h4, h5, h6 {
   --color-background: hsl(300, 1%, 20%);
   --color-main-text: hsl(37, 63%, 83%); 
 
-  --font-header: 'Hahmlet', serif;
-  --font-header2: 'Vollkorn', serif;
+
+  --font-header: 'Vollkorn', serif;
   --font-body: 'Quicksand', sans-serif;
 
   --font-weight-light: 400;
@@ -58,8 +58,8 @@ p, h1, h2, h3, h4, h5, h6 {
   --color-gray-100: hsl(210, 15%, 20%);
   --color-brown: hsl(330, 2%, 20%);
 
-  --yellow-hover: hsl(39, 72%, 53%);
-  --teal-hover: hsl(158, 11%, 45%);
+  --yellow-hover: hsl(44, 100%, 50%);
+  --teal-hover: hsl(163, 26%, 48%);
 }
 
 body{
@@ -94,7 +94,7 @@ body{
 
 .compare-container h2{
   padding-bottom: 0.5rem;
-  font-family: var(--font-header2);
+  font-family: var(--font-header);
   font-size: 2rem;
 }
 
@@ -111,7 +111,8 @@ body{
 .btn{
   display: block;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 500;
+  
   letter-spacing: 1px;
   font-family: var(--font-body);
   border-radius: 5px;
@@ -119,6 +120,7 @@ body{
   text-transform: uppercase;
   padding: 0.8rem 2rem;
   border: 0;
+  transition: background-color 200ms ease-in-out, transform 300ms ease-in-out;
 }
 
 .toggle{
@@ -126,12 +128,16 @@ body{
 }
 .toggle:hover{
   background-color: var(--yellow-hover);
-  transition: background-color 2s ease-in-out;
+  font-weight: 600;
+  transform: translateY(-2px);
 }
 .expand{
   background-color: var(--color-teal);
 }
 .expand:hover{
   background-color: var(--teal-hover);
-  transition: background-color 2s ease-in-out;
+  font-weight: 600;
+  transform: translateY(-2px);
 }
+
+
