@@ -30,10 +30,6 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-.hidden{
-  display: none;
-}
-
 /* 
   End of CSS Reset
 */
@@ -80,10 +76,10 @@ body{
   justify-content: center;
   flex-direction: column;
   background-position: calc(50% - 1140px) center;
-  max-width: 500px;
+  max-width: 700px;
   border: 1px solid #4e4b4d;
   border-radius: 8px;
-  padding: 32px;
+  padding: 4rem;
 }
 
 .compare-container{
@@ -102,6 +98,36 @@ body{
   display: block;
   width: 100%;
 }
+
+.hidden{
+  display:none;
+  opacity: 0;
+}
+
+
+.card-one{
+  opacity: 1;
+  animation:bounce 400ms ease-in;
+}
+
+.card-two{
+  opacity: 1;
+  animation:bounce 400ms ease-in;
+}
+
+/* @keyframes bounce{
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+    transform: translateY(0);
+  }
+ } */
+
+.expand-Img img{
+  transform: scale(0.7);
+}
+
 
 .button-wrapper{
   display: flex;
@@ -126,6 +152,7 @@ body{
 .toggle{
   background-color: var(--color-yellow);
 }
+
 .toggle:hover{
   background-color: var(--yellow-hover);
   font-weight: 600;
