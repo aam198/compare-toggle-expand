@@ -14,7 +14,6 @@ function sideBySide() {
     cardTwo.classList.add('hidden');
   }
   else{
-    compareContainer.style.display ="flex";
     cardOne.classList.add('expand-Img');
     cardTwo.classList.remove('hidden');
     cardTwo.classList.add('expand-Img');
@@ -36,5 +35,6 @@ toggleBtn.addEventListener('click', () => {
 expandBtn.addEventListener('click', () => {
   toggleBtn.disabled=true;
   expandBtn.innerHTML="Collapse";
+  compareContainer.style.display ="flex";
   sideBySide();
 });
