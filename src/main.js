@@ -9,15 +9,15 @@ function sideBySide() {
   if(cardTwo.classList.contains('expand-Img') || cardOne.classList.contains('expand-Img')) {
     cardOne.classList.remove('expand-Img');
     cardTwo.classList.remove('expand-Img');
-    cardTwo.classList.add('hidden');
     compareContainer.style.display="block";
     toggleBtn.disabled=false;
+    cardTwo.classList.add('hidden');
   }
   else{
+    compareContainer.style.display ="flex";
     cardOne.classList.add('expand-Img');
     cardTwo.classList.remove('hidden');
     cardTwo.classList.add('expand-Img');
-    compareContainer.style.display ="flex";
   }
 }
 
@@ -35,5 +35,6 @@ toggleBtn.addEventListener('click', () => {
 
 expandBtn.addEventListener('click', () => {
   toggleBtn.disabled=true;
+  expandBtn.innerHTML="Collapse";
   sideBySide();
 });
