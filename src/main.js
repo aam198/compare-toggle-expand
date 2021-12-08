@@ -7,34 +7,28 @@ const compareContainer = document.querySelector(".compare-container");
 
 function sideBySide() {
   if(cardTwo.classList.contains('expand-Img') || cardOne.classList.contains('expand-Img')) {
-    cardOne.classList.remove('expand-Img');
-    cardTwo.classList.remove('expand-Img');
+    cardOne.classList.toggle('expand-Img');
+    cardTwo.classList.toggle('expand-Img');
     compareContainer.style.display="block";
     toggleBtn.disabled=false;
-    cardTwo.classList.add('hidden');
+    expandBtn.innerHTML="Expand";
   }
   else{
-    cardOne.classList.add('expand-Img');
-    cardTwo.classList.remove('hidden');
-    cardTwo.classList.add('expand-Img');
+    expandBtn.innerHTML="Collapse";
+    cardOne.classList.toggle('expand-Img');
+    cardTwo.classList.toggle('expand-Img');
   }
 }
 
-
 toggleBtn.addEventListener('click', () => {
-  if(cardTwo.classList.contains('hidden')) {
-    cardTwo.classList.remove('hidden');
-    cardOne.classList.add('hidden');
-  }
-  else {
-    cardTwo.classList.add('hidden');
-    cardOne.classList.remove('hidden');
-  }
+  cardTwo.classList.toggle('hidden');
+  cardOne.classList.toggle('hidden');
 });
+
+
 
 expandBtn.addEventListener('click', () => {
   toggleBtn.disabled=true;
-  expandBtn.innerHTML="Collapse";
   compareContainer.style.display ="flex";
   sideBySide();
 });

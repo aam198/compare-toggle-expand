@@ -47,15 +47,15 @@ p, h1, h2, h3, h4, h5, h6 {
   --font-weight-medium: 500;
   --font-weight-heavy: 600;
 
-  --color-yellow: hsl(44, 100%, 66%);
-  --color-teal: hsl(163, 26%, 58%);
+  --color-yellow: hsl(44, 100%, 50%);
+  --color-teal:  hsl(163, 26%, 48%);
   --color-blue: hsl(206, 47%, 59%);
   --color-red: hsl(11, 71%, 44%);
   --color-gray-100: hsl(210, 15%, 20%);
   --color-brown: hsl(330, 2%, 20%);
 
-  --yellow-hover: hsl(44, 100%, 50%);
-  --teal-hover: hsl(163, 26%, 48%);
+  --yellow-hover:   hsl(44, 100%, 64%);
+  --teal-hover: hsl(163, 26%, 57%);
 }
 
 body{
@@ -115,14 +115,14 @@ body{
   animation:bounce 400ms ease-in;
 }
 
-/* @keyframes bounce{
+  /* @keyframes bounce{
   from {
     transform: translateY(-500px);
   }
   to {
     transform: translateY(0);
   }
- } */
+ }   */
 
 .expand-Img img{
   transform: scale(0.7);
@@ -136,9 +136,9 @@ body{
 
 .btn{
   display: block;
+  width: 12rem;
   font-size: 1.5rem;
   font-weight: 500;
-  
   letter-spacing: 1px;
   font-family: var(--font-body);
   border-radius: 5px;
@@ -158,6 +158,7 @@ body{
   font-weight: 600;
   transform: translateY(-2px);
 }
+
 .expand{
   background-color: var(--color-teal);
 }
