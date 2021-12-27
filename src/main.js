@@ -6,17 +6,17 @@ const compareContainer = document.querySelector(".compare-container");
 
 
 function sideBySide() {
-  if(cardTwo.classList.contains('expand-Img') || cardOne.classList.contains('expand-Img')) {
-    cardOne.classList.toggle('expand-Img');
-    cardTwo.classList.toggle('expand-Img');
+  if(cardTwo.classList.contains('expand-Img-2') || cardOne.classList.contains('expand-Img-1')) {
+    cardOne.classList.toggle('expand-Img-1');
+    cardTwo.classList.toggle('expand-Img-2');
     compareContainer.style.display="block";
     toggleBtn.disabled=false;
     expandBtn.innerHTML="Expand";
   }
   else{
     expandBtn.innerHTML="Collapse";
-    cardOne.classList.toggle('expand-Img');
-    cardTwo.classList.toggle('expand-Img');
+    cardOne.classList.toggle('expand-Img-1');
+    cardTwo.classList.toggle('expand-Img-2');
   }
 }
 
