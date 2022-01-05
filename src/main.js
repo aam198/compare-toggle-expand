@@ -6,9 +6,9 @@ const compareContainer = document.querySelector(".compare-container");
 const wrapper=document.querySelector(".wrapper");
 
 
+
 function sideBySide() {
 
-  wrapper.style.padding= 1.5 + "rem";
   const hideCheck1 = cardOne.classList;
   const hideCheck2 = cardTwo.classList;
 
@@ -27,20 +27,24 @@ function sideBySide() {
     toggleBtn.disabled=false;
     expandBtn.innerHTML="Expand";
     cardTwo.classList.add('hidden');
+    wrapper.style.padding= 2 + "rem";
+    compareContainer.style.width= 80 + "%";
   }
   else {
     expandBtn.innerHTML="Collapse";
     cardOne.classList.add('expand-Img-1');
     cardTwo.classList.add('expand-Img-2');
+    wrapper.style.padding= 0.5 + "rem";
+    compareContainer.style.width= 100 + "%";
   }
 }
+
+// Event Listeners
 
 toggleBtn.addEventListener('click', () => {
   cardTwo.classList.toggle('hidden');
   cardOne.classList.toggle('hidden');
 });
-
-
 
 expandBtn.addEventListener('click', () => {
   toggleBtn.disabled=true;
