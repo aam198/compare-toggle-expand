@@ -26,13 +26,12 @@ function sideBySide() {
     toggleBtn.disabled=false;
     expandBtn.innerHTML="Expand";
     cardTwo.classList.add('hidden');
-    wrapper.style.padding= 2 + "rem";
   }
   else {
     expandBtn.innerHTML="Collapse";
     cardOne.classList.add('expand-Img-1');
     cardTwo.classList.add('expand-Img-2');
-    wrapper.style.padding= 1 + "rem";
+   
     
   }
 }

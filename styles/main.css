@@ -101,9 +101,10 @@ header{
 }
 
 .compare-container{
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
+  margin-top: 0.5rem;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
 }
 
 .compare-container h2{
