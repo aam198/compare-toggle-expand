@@ -58,16 +58,18 @@ p, h1, h2, h3, h4, h5, h6 {
   --teal-hover: hsl(163, 26%, 57%);
 }
 
+
+
 body{
   background-color: var(--color-background);
   color: var(--color-main-text);
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   background-image: url(//github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-teletype-graphic-cf60b66bbb2b00e1e4e9f8020b9fa59b6084d77ed4c7a3c4e0cdab5848aabca7.svg); 
-  background-position: calc(50% - 1140px) center;
+  background-position: calc(50% - 1050px) center;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 @font-face{
@@ -78,24 +80,30 @@ body{
       font-stretch: 25% 151%;
 }
 
+header{
+  min-height: 15vh;
+  width: 100%;
+}
+
 .wrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-position: calc(50% - 1140px) center;
-  max-width: 1000px;
-  height: 68vh;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
   border: 1px solid #4e4b4d;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  margin: 2rem 0;
 }
 
 .compare-container{
   margin-bottom: 4rem;
   width: 80%;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 }
 
 .compare-container h2{
@@ -112,9 +120,11 @@ body{
 .button-wrapper{
   display: flex;
   gap: 1rem;
-  margin-bottom: 0.7em;
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-top: 1rem;
   position: absolute;
-  bottom: 2%;
+  bottom: 0;
   z-index: 1;
 }
 
@@ -165,10 +175,12 @@ body{
 
 
 .btn{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 12rem;
   font-size: 1.5rem;
-  font-weight: 350;
+  font-weight: 500;
   letter-spacing: 1px;
   font-family: var(--font-body);
   border-radius: 5px;
@@ -186,7 +198,6 @@ body{
 
 .toggle:hover:not([disabled]){
   background-color: var(--yellow-hover);
-  font-weight: 600;
   transform: translateY(-2px);
 }
 
@@ -199,7 +210,6 @@ body{
 }
 .expand:hover{
   background-color: var(--teal-hover);
-  font-weight: 600;
   transform: translateY(-2px);
 }
 
@@ -255,7 +265,17 @@ body{
 }
 
 
+section.scroll-animate{
+  background-color: var(--color-yellow);
+  margin-top: 5rem;
+  height: 45vh;
+  width: 100%;
+}
 
+
+
+
+/* Extra Animation Options */
 /* 
 @keyframes bounce{
   from {
@@ -264,4 +284,16 @@ body{
   to {
     transform: translateY(0);
   }
- }    */
+  }  */
+
+  @media (min-width: 320px) and (max-width: 700px) {
+
+    .compare-container{
+      width: 100%;
+      padding: 0;
+    }
+    .btn{
+      font-size: 1rem;
+      width: 8rem;
+    }
+  }
