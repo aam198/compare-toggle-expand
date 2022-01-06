@@ -4,7 +4,7 @@ const cardOne = document.getElementById("card-one");
 const cardTwo = document.getElementById("card-two");
 const compareContainer = document.querySelector(".compare-container");
 const wrapper=document.querySelector(".wrapper");
-
+const expanded = document.querySelector(".expanded");
 
 
 function sideBySide() {
@@ -23,7 +23,6 @@ function sideBySide() {
   if(cardTwo.classList.contains('expand-Img-2') ||      cardOne.classList.contains('expand-Img-1')) {
     cardOne.classList.toggle('expand-Img-1');
     cardTwo.classList.toggle('expand-Img-2');
-    compareContainer.style.display="block";
     toggleBtn.disabled=false;
     expandBtn.innerHTML="Expand";
     cardTwo.classList.add('hidden');
@@ -34,7 +33,7 @@ function sideBySide() {
     cardOne.classList.add('expand-Img-1');
     cardTwo.classList.add('expand-Img-2');
     wrapper.style.padding= 1 + "rem";
-    compareContainer.style.width= 100 + "%";
+    
   }
 }
 
@@ -47,6 +46,6 @@ toggleBtn.addEventListener('click', () => {
 
 expandBtn.addEventListener('click', () => {
   toggleBtn.disabled=true;
-  compareContainer.style.display ="flex";
+  compareContainer.classList.toggle('expanded');
   sideBySide();
 });
