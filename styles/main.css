@@ -293,24 +293,61 @@ section.scroll-animate::before{
 section.scroll-animate{
   background-color: var(--color-yellow);
   margin-top: 6rem;
-  min-height: 65vh;
-  height: auto;
+  /* take out min if space is left over */
+  min-height: 350vh;
   width: 100%;
   position: relative;
   z-index: 10;
-  color: var(--color-brown);
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 1.1rem;
 }
 
 .scroll-animate h2{
   font-family: var(--font-header);
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--color-brown);
   text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
+.steps-container {
+  color: var(--color-brown);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1150px;
+  width: 100%;
+  margin: 5rem auto;
+}
+
+
+.step-left-container{
+  flex: 1;
+  border: 1px solid black;
+  max-width: 50%;
+  width: 100%;
+}
+
+.step-right-container{
+  flex: 1;
+  border: 1px solid black;
+  max-width: 40%;
+  width: 100%;
+}
+
+.step-right.block{
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+h3.step-heading {
+  font-size: 36px;
+  margin-bottom: 32px;
+  font-family: var(--font-header);
+}
 
 
 /* 
