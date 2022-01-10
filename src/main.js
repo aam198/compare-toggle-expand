@@ -31,8 +31,6 @@ function sideBySide() {
     expandBtn.innerHTML="Collapse";
     cardOne.classList.add('expand-Img-1');
     cardTwo.classList.add('expand-Img-2');
-   
-    
   }
 }
 
