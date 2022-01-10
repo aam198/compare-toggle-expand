@@ -5,6 +5,8 @@ const cardTwo = document.getElementById("card-two");
 const compareContainer = document.querySelector(".compare-container");
 const wrapper=document.querySelector(".wrapper");
 const expanded = document.querySelector(".expanded");
+const stepLefts = document.querySelectorAll(".step-left");
+const stepRights = document.querySelectorAll(".step-right");
 
 
 function sideBySide() {
@@ -34,15 +36,62 @@ function sideBySide() {
   }
 }
 
+// Steps container to change images based on scroll position but i want when it runs to an id 
+
+function handleIntersection(entries) {
+  entries.forEach(entry => {
+    if(entry.isIntersection){
+      stepLefts.forEach(stepLeft => {
+        if(stepLeft.classList.contains('active')){
+        stepLeft.classList.remove("active");
+        }
+        else{
+          stepLeft.classList.add("active");
+        }
+      })
+    }
+  })
+}
+
+let observer = new IntersectionObserver(handleIntersection);
+observer.observe(stepRights);
+
+
+// stepActive();
+
+// function stepActive() {
+//   const triggerImage = window.innerHeight/5*4;
+
+//   stepLefts.forEach(stepLeft => {
+//     const stepTop = stepLeft.getBoundingClientRect().top;
+
+//     if (stepTop < triggerImage){
+//       stepLeft.classList.add('active');
+//     }
+//     else {
+//       stepLeft.classList.remove('active');
+//     }
+//   })
+// }
+
+
+
+
+
 // Event Listeners
 
+// For Toggle in first section
 toggleBtn.addEventListener('click', () => {
   cardTwo.classList.toggle('hidden');
   cardOne.classList.toggle('hidden');
 });
 
+// Expand & Collapse 
 expandBtn.addEventListener('click', () => {
   toggleBtn.disabled=true;
   compareContainer.classList.toggle('expanded');
   sideBySide();
 });
+
+// Steps section
+// window.addEventListener('scroll', stepActive);
