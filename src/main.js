@@ -39,9 +39,9 @@ function sideBySide() {
 // Steps container to change images based on scroll position but i want when it runs to an id 
 
 function handleIntersection(entries) {
-  entries.forEach(entry => {
-    if(entry.isIntersection){
-      stepLefts.forEach(stepLeft => {
+  entries.map((entry) => {
+    if(entry.isIntersecting){
+      stepLefts.forEach((stepLeft) => {
         if(stepLeft.classList.contains('active')){
         stepLeft.classList.remove("active");
         }
@@ -53,9 +53,11 @@ function handleIntersection(entries) {
   })
 }
 
-let observer = new IntersectionObserver(handleIntersection);
-observer.observe(stepRights);
 
+window.addEventListener("load", (event) => {
+  const observer = new IntersectionObserver(handleIntersection);
+  stepRights.forEach((step) => observer.observe(step));
+});
 
 // stepActive();
 
