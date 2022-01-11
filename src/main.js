@@ -45,13 +45,9 @@ console.log(stepLefts.length);
 function handleIntersection(entries) {
   entries.map((entry) => {
     if(entry.isIntersecting){
-      activeImg++;
       console.log(activeImg);
-      if(activeImg > stepLefts.length-1){
-        activeImg = 0;
-      }
-      else if(activeImg < 0){
-        activeImg = slides.length-1;
+      if(activeImg < 0){
+        activeImg = stepLefts.length-1;
       }
       setActiveImg();
     }
@@ -63,12 +59,14 @@ function setActiveImg() {
     step.classList.remove('active');
   })
   stepLefts[activeImg].classList.add('active');
+  activeImg++;
 }
 
 
 window.addEventListener("load", (event) => {
   const observer = new IntersectionObserver(handleIntersection);
   stepRights.forEach((step) => observer.observe(step));
+  
 });
 
 // stepActive();
