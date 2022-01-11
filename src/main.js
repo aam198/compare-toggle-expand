@@ -8,6 +8,8 @@ const expanded = document.querySelector(".expanded");
 const stepLefts = document.querySelectorAll(".step-left");
 const stepRights = document.querySelectorAll(".step-right");
 
+let activeImg = 0;
+
 
 function sideBySide() {
 
@@ -38,19 +40,26 @@ function sideBySide() {
 
 // Steps container to change images based on scroll position but i want when it runs to an id 
 
+console.log(stepLefts.length);
+
 function handleIntersection(entries) {
   entries.map((entry) => {
     if(entry.isIntersecting){
-      stepLefts.forEach((stepLeft) => {
-        if(stepLeft.classList.contains('active')){
-        stepLeft.classList.remove("active");
-        }
-        else{
-          stepLeft.classList.add("active");
-        }
-      })
+      activeImg++;
+      console.log(activeImg);
+      if(activeImg > stepLefts.length - 1){
+        activeImg = 0;
+      }
+      setActiveImg();
     }
   })
+}
+
+function setActiveImg() {
+  stepLefts.forEach(step => {
+    step.classList.remove('active');
+  })
+  stepLefts[activeImg].classList.add('active');
 }
 
 
