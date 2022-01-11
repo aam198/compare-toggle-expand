@@ -47,8 +47,11 @@ function handleIntersection(entries) {
     if(entry.isIntersecting){
       activeImg++;
       console.log(activeImg);
-      if(activeImg > stepLefts.length - 1){
+      if(activeImg > stepLefts.length-1){
         activeImg = 0;
+      }
+      else if(activeImg < 0){
+        activeImg = slides.length-1;
       }
       setActiveImg();
     }
