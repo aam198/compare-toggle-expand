@@ -42,31 +42,31 @@ function sideBySide() {
 
 console.log(stepLefts.length);
 
-function handleIntersection(entries) {
-  entries.map((entry) => {
-    if(entry.isIntersecting){
+function handleIntersection(entries,observer){
+  entries.forEach((entry) => {
+    if(entry.isIntersecting && !entry < stepLefts.length-1){
       console.log(activeImg);
-      if(activeImg < 0){
-        activeImg = stepLefts.length-1;
-      }
-      setActiveImg();
+      stepLefts.forEach(step => {
+        step.classList.remove('active');
+      })
+      stepLefts[activeImg].classList.add('active');
+      activeImg++;
     }
   })
-}
+};
 
-function setActiveImg() {
-  stepLefts.forEach(step => {
-    step.classList.remove('active');
-  })
-  stepLefts[activeImg].classList.add('active');
-  activeImg++;
-}
+// function setActiveImg() {
+//   stepLefts.forEach(step => {
+//     step.classList.remove('active');
+//   })
+//   stepLefts[activeImg].classList.add('active');
+//   activeImg++;
+// }
 
 
 window.addEventListener("load", (event) => {
-  const observer = new IntersectionObserver(handleIntersection);
+  let observer = new IntersectionObserver(handleIntersection);
   stepRights.forEach((step) => observer.observe(step));
-  
 });
 
 // stepActive();
