@@ -38,22 +38,46 @@ function sideBySide() {
   }
 }
 
-// Steps container to change images based on scroll position but i want when it runs to an id 
+// Steps container to change images based on scroll position but i want the image to change based on id on the left. 
 
 console.log(stepLefts.length);
 
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.7
+};
+
 function handleIntersection(entries,observer){
   entries.forEach((entry) => {
-    if(entry.isIntersecting && !entry < stepLefts.length-1){
-      console.log(activeImg);
-      stepLefts.forEach(step => {
-        step.classList.remove('active');
-      })
-      stepLefts[activeImg].classList.add('active');
-      activeImg++;
+    if(entry.isIntersecting){
+      entry.target.classList.replace('fade-out', 'active')
+    }
+    else{
+      entry.target.classList.replace('active', 'fade-out');
     }
   })
 };
+
+const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+stepLefts.forEach((step) => observer.observe(step));
+
+// function handleIntersection(entries,observer){
+//   entries.forEach((entry) => {
+//     if(entry.isIntersecting){
+//       console.log(activeImg);
+//       // stepLefts.forEach(step => {
+//       //   step.classList.remove('active');
+//       // })
+//       stepLefts[activeImg].classList.add('active');
+//       activeImg++;
+//     }
+//     else{
+
+//     }
+//   })
+// };
 
 // function setActiveImg() {
 //   stepLefts.forEach(step => {
@@ -64,10 +88,8 @@ function handleIntersection(entries,observer){
 // }
 
 
-window.addEventListener("load", (event) => {
-  let observer = new IntersectionObserver(handleIntersection);
-  stepRights.forEach((step) => observer.observe(step));
-});
+
+
 
 // stepActive();
 
