@@ -61,11 +61,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 body{
-  background-color: var(--color-background);
-  color: var(--color-main-text);
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: var(--color-background);
+  color: var(--color-main-text);
   background-image: url(//github-atom-io-herokuapp-com.freetls.fastly.net/assets/index-teletype-graphic-cf60b66bbb2b00e1e4e9f8020b9fa59b6084d77ed4c7a3c4e0cdab5848aabca7.svg); 
   background-position: calc(50% - 1050px) center;
   background-repeat: no-repeat;
@@ -86,15 +86,13 @@ header{
 }
 
 .wrapper {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   max-width: 800px;
   width: 100%;
-  min-height: 70vh;
-  height: 100%;
+  max-height: 75vh;
   border: 1px solid #4e4b4d;
   border-radius: 8px;
   padding: 2rem 1rem;
@@ -102,10 +100,10 @@ header{
 }
 
 .compare-container{
-  margin-bottom: 6rem;
-  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   width: 100%;
-  padding: 2rem 2rem;
+  padding: 2rem 4rem;
 }
 
 .compare-container h2{
@@ -117,6 +115,11 @@ header{
 .compare-container img{
   display: block;
   width: 100%;
+  height: 100%;
+}
+
+.compare-container.expanded ~ .button-wrapper{
+  
 }
 
 .expanded{
@@ -127,14 +130,10 @@ header{
   padding: 0.7rem 1rem;
 }
 
-
 .button-wrapper{
   display: flex;
   gap: 1rem;
   padding-bottom: 1.5rem;
-  padding-top: 1rem;
-  position: absolute;
-  bottom: 0;
   z-index: 1;
 }
 
