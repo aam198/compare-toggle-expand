@@ -94,7 +94,6 @@ header{
   width: 100%;
   border: 1px solid #4e4b4d;
   border-radius: 8px;
-  padding: 2rem 1rem;
   margin: 2rem 0;
 }
 
@@ -118,16 +117,16 @@ header{
   height: 100%;
 }
 
-/* .compare-container.expanded ~ .button-wrapper{
-  
-} */
+.compare-container.expanded ~ .button-wrapper{
+  height: 16%;
+}
 
 .expanded{
   width: 100%;
-  height: 55vh;
+  height: 49vh;
   display: flex;
   align-items: center;
-  padding: 0.7rem 1rem;
+  padding: 0.7rem 1rem 1.5rem 1rem;
 }
 
 .button-wrapper{
@@ -135,6 +134,7 @@ header{
   gap: 1rem;
   z-index: 1;
   height: 20%;
+  padding-bottom: 1.5rem;
 }
 
 .hidden{
@@ -413,17 +413,33 @@ h3.step-heading {
     
     .compare-container{
       width: 100%;
-      padding: 0;
-      height: auto;
+      padding: 0.5rem 1.5rem;
+      height: 76%;
     }
-    .button-wrapper {
-      padding-bottom: 1rem;
+    .compare-container.expanded ~ .button-wrapper{
+      padding-bottom: 0.5rem;
     }
+    
     .btn{
-      font-size: 1rem;
+      font-size: 1.2rem;
       width: 8rem;
+      height: 3rem;
+    }
+    .expanded{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .expanded h2{
       font-size: 1.2rem;
+   }
+   .card-one.expand-Img-1, .card-two.expand-Img-2{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+   .compare-container.expanded > .expand-Img-1 img, .compare-container.expanded > .expand-Img-2 img{
+     width: 80%;
+     height: 80%;
    }
   }
