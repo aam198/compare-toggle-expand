@@ -14,6 +14,7 @@
 }
 html, body {
   height: 100%;
+
 }
 body {
   line-height: 1.5;
@@ -194,6 +195,7 @@ header{
   text-transform: uppercase;
   padding: 0.8rem 2rem;
   border: 0;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
   transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
 }
 
@@ -302,7 +304,7 @@ section.scroll-animate{
 
 .scroll-animate h2{
   font-family: var(--font-header);
-  font-size: 3rem;
+  font-size: clamp(2.4rem, 3.2vw + 1rem, 3rem);
   color: var(--color-brown);
   text-align: center;
   margin-bottom: 2rem;
@@ -367,6 +369,11 @@ section.scroll-animate{
   filter: blur(10px);
 }
 
+/*
+* ----------------------------------
+* Step-Right Styles
+* ----------------------------------
+*/
 
 .step-right-container{
   flex: 1;
@@ -378,10 +385,11 @@ section.scroll-animate{
   height: 60vh;
   display: flex;
   align-items: center;
+  padding-bottom: 2vh;
 }
 
 h3.step-heading {
-  font-size: 36px;
+  font-size: clamp(1.8rem, 3.7vw + 0.2rem, 2.5rem);
   margin-bottom: 32px;
   font-family: var(--font-header);
 }
@@ -418,6 +426,7 @@ h3.step-heading {
     }
     .compare-container.expanded ~ .button-wrapper{
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
     
     .btn{
@@ -426,6 +435,8 @@ h3.step-heading {
       height: 3rem;
     }
     .expanded{
+      width: 100%;
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -442,4 +453,39 @@ h3.step-heading {
      width: 80%;
      height: 80%;
    }
+   .button-wrapper{
+     align-items: flex-end;
+   }
+
+   /*
+    * ----------------------------------
+    * Step Styles
+    * ----------------------------------
+    */
+
+  .steps-container{
+    justify-content: space-around;
+  }
+  .scroll-animate h2 {
+    /* font-size: 2.2rem; */
+    margin-top: 3rem;
+  }
+  h3.step-heading {
+    margin-bottom: 0;
+    height: 5rem;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0;
+  }
+  .step-text{
+    font-size: 1rem;
+  }
+
+
+  }
+
+  @media (max-width: 520px) {
+    .step-text{
+      font-size: 0.9rem;
+    }
   }
