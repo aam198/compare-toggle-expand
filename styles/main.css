@@ -311,6 +311,20 @@ section.scroll-animate{
   margin-top: 2rem;
 }
 
+/* Step Pagination Styles */
+
+.step-pagination{
+  position: sticky;
+  top: 0rem;
+  width: 3%;
+}
+
+.step-pagination ul{
+  list-style-type: none;
+}
+
+/* Step Container */
+
 .steps-container {
   color: var(--color-brown);
   font-family: var(--font-body);
@@ -480,7 +494,6 @@ h3.step-heading {
   .step-text{
     font-size: 1rem;
   }
-
 
   }
 
