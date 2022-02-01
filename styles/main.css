@@ -314,13 +314,41 @@ section.scroll-animate{
 /* Step Pagination Styles */
 
 .step-pagination{
-  position: sticky;
-  top: 0rem;
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  bottom: 0;
   width: 3%;
+  padding-top: 27%;
+}
+
+.step-pagination li.teal{
+  background-color: var(--color-teal);
 }
 
 .step-pagination ul{
   list-style-type: none;
+  position:sticky;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(0,-50%);
+}
+
+.step-pagination li{
+  background:var(--color-blue);
+  margin-bottom: 1rem;
+  width: 2rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-list a{
+  text-decoration: none;
+  color: var(--color-yellow);
 }
 
 /* Step Container */

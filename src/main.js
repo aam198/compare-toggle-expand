@@ -8,6 +8,7 @@ const expanded = document.querySelector(".expanded");
 const stepLefts = document.querySelectorAll(".step-left");
 const stepRights = document.querySelectorAll(".step-right");
 
+
 let activeImg = 0;
 
 
@@ -48,7 +49,7 @@ const observerOptions = {
   threshold: 0.7
 };
 
-function handleIntersection(entries,observer){
+function handleIntersection(entries,observerOptions){
   entries.forEach((entry) => {
     if(entry.isIntersecting){
       entry.target.classList.replace('fade-out', 'active')
@@ -63,50 +64,6 @@ const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
 stepLefts.forEach((step) => observer.observe(step));
 
-// function handleIntersection(entries,observer){
-//   entries.forEach((entry) => {
-//     if(entry.isIntersecting){
-//       console.log(activeImg);
-//       // stepLefts.forEach(step => {
-//       //   step.classList.remove('active');
-//       // })
-//       stepLefts[activeImg].classList.add('active');
-//       activeImg++;
-//     }
-//     else{
-
-//     }
-//   })
-// };
-
-// function setActiveImg() {
-//   stepLefts.forEach(step => {
-//     step.classList.remove('active');
-//   })
-//   stepLefts[activeImg].classList.add('active');
-//   activeImg++;
-// }
-
-
-
-
-
-// stepActive();
-
-// function stepActive() {
-//   const triggerImage = window.innerHeight/5*4;
-
-//   stepLefts.forEach(stepLeft => {
-//     const stepTop = stepLeft.getBoundingClientRect().top;
-
-//     if (stepTop < triggerImage){
-//       stepLeft.classList.add('active');
-//     }
-//     else {
-//       stepLeft.classList.remove('active');
-//     }
-//   })
-// }
 
 
 
