@@ -7,7 +7,7 @@ const wrapper=document.querySelector(".wrapper");
 const expanded = document.querySelector(".expanded");
 const stepLefts = document.querySelectorAll(".step-left");
 const stepRights = document.querySelectorAll(".step-right");
-
+const paginateItem = document.querySelectorAll(".pagination-item");
 
 let activeImg = 0;
 
@@ -52,10 +52,45 @@ const observerOptions = {
 function handleIntersection(entries,observerOptions){
   entries.forEach((entry) => {
     if(entry.isIntersecting){
+      console.log(entry.target);
       entry.target.classList.replace('fade-out', 'active')
+      if(entry.target.classList.contains("active")){
+        console.log("is active at this point")
+        if(entry.target.classList.contains("image-1")){
+          paginateItem[0].style.background="var(--color-red)";
+        }
+        else{
+          paginateItem[0].style.background="";
+        }
+        if(entry.target.classList.contains("image-2")){
+          paginateItem[1].style.background="var(--color-red)";
+        }
+        else{
+          paginateItem[1].style.background="";
+        }
+        if(entry.target.classList.contains("image-3")){
+          paginateItem[2].style.background="var(--color-red)";
+        }
+        else{
+          paginateItem[2].style.background="";
+        }
+        if(entry.target.classList.contains("image-4")){
+          paginateItem[3].style.background="var(--color-red)";
+        }
+        else{
+          paginateItem[3].style.background="";
+        }
+        if(entry.target.classList.contains("image-5")){
+          paginateItem[4].style.background="var(--color-red)";
+        }
+        else{
+          paginateItem[4].style.background="";
+        }
+      }
     }
     else{
       entry.target.classList.replace('active', 'fade-out');
+
     }
   })
 };

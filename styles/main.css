@@ -315,15 +315,11 @@ section.scroll-animate{
 
 .step-pagination{
   position: absolute;
-  top: 0;
+  top: 5.5rem;
   right: 3rem;
   bottom: 0;
   width: 3%;
   padding-top: 27%;
-}
-
-.step-pagination li.teal{
-  background-color: var(--color-teal);
 }
 
 .step-pagination ul{
@@ -335,7 +331,7 @@ section.scroll-animate{
 }
 
 .step-pagination li{
-  background:var(--color-blue);
+  background: var(--color-blue);
   margin-bottom: 1rem;
   width: 2rem;
   border-radius: 50%;
@@ -344,7 +340,10 @@ section.scroll-animate{
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: background 400ms ease;
 }
+
+
 
 .pagination-list a{
   text-decoration: none;
