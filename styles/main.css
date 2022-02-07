@@ -356,6 +356,10 @@ section.scroll-animate{
   color: var(--color-yellow);
 }
 
+.pagination-list li:focus{
+  border: 1px dashed var(--color-yellow);
+}
+
 /* Step Container */
 
 .steps-container {
