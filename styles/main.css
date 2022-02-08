@@ -183,8 +183,6 @@ header{
   opacity: 0;
 }
 
-
-
 .btn{
   display: inline-flex;
   align-items: center;
@@ -208,6 +206,10 @@ header{
   background-color: var(--color-yellow);
 }
 
+.btn.toggle:focus-visible::-moz-focus-inner:not([disabled]){
+  border-color: var(--color-blue);
+}
+
 .toggle:hover:not([disabled]){
   background-color: var(--yellow-hover);
   transform: translateY(-2px);
@@ -223,6 +225,17 @@ header{
 .expand:hover{
   background-color: var(--teal-hover);
   transform: translateY(-2px);
+}
+
+button.expand:focus, button.toggle:focus{
+  outline: none;
+}
+
+button.expand:focus-visible::-moz-focus-inner,
+button.toggle:focus-visible::-moz-focus-inner,
+button.expand:focus-visible,
+button.toggle:focus-visible{
+  outline: 2px dashed var(--color-blue);
 }
 
 .expand:active {
