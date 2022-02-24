@@ -15,7 +15,6 @@
   </header>
 
 <section class="wrapper">
-<!-- TODO add fade-out -->
   <div class="compare-container">
     <div class="card-one" id="card-one">
       <h2 class="card-1">Antialiasing</h2>
@@ -48,6 +47,7 @@
     </ul>
   </div>
     <h2>Just 5 steps to efficient cooking.</h2>
+    <p class="info">Use of the Intersection Observer API</p>
     <div class="steps-container">
     <!-- Similar to 5 steps https://www.appsmith.com/ -->
     <div class="step-left-container">
@@ -109,46 +109,72 @@
    
 
   </div>
-  <!-- <div style="overflow: hidden;">
-    <svg
-      preserveAspectRatio="none"
-      viewBox="0 0 1200 120"
-      xmlns="http://www.w3.org/2000/svg"
-      style="fill: #ffbb00; width: 100%; height: 177px;"
-    >
-      <path d="M1200 120L0 16.48V0h1200v120z" />
-    </svg>
-  </div> -->
+  
 
 </section>
 
 <!-- End of Scroll-Animate -->
 
-<!-- Start of Cost Reveal -->
-<section class="cost-reveal-container">
-  <svg class="svg-snoweb svg-theme-light" height="100" preserveaspectratio="none" viewbox="0 0 1920.03 420.61" width="100%" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
-    <g transform="scale (1, -1)" transform-origin="center">
-     <path class="svg-fill-primary" d="M1920,420.61H0S18.53,2.05,587.58,129.09c566.79,126.52,611.61,247,908.39,96.75C1779.28,82.42,1920,420.61,1920,420.61Z" transform="translate(0.03)">
-     </path>
-     <circle class="svg-fill-primary" cx="1735.28" cy="40.89" r="40.89">
-     </circle>
-     <circle class="svg-fill-primary" cx="1799.4" cy="130.4" r="24.28">
-     </circle>
-     <circle class="svg-fill-primary" cx="1822.78" cy="73.13" r="11.13">
-     </circle>
-     <circle class="svg-fill-primary" cx="76.1" cy="109.72" r="19.37">
-     </circle>
-     <path class="svg-fill-primary" d="M1920,420.61H0S128.72,70,705.48,137.8s643.15,244.74,940,94.46C1928.72,88.84,1920,420.61,1920,420.61Z" transform="translate(0.03)">
-     </path>
-    </g>
-   </svg>
-   <p>Reprehenderit et quis tempor eiusmod quis occaecat labore nulla est reprehenderit nostrud cupidatat officia. Ullamco nisi reprehenderit cupidatat do esse dolor voluptate id. Sit quis ullamco eu laborum est. Consequat irure amet laborum ullamco ipsum laborum proident velit commodo laborum non do. Sit commodo qui duis fugiat ullamco proident cillum. Adipisicing occaecat eu elit voluptate sint. Lorem ex eiusmod dolore labore non Lorem incididunt excepteur.</p>
-</section>
 
-<footer>
+
+<section class="svg-wrapper">
+  <h2>Creating accessible SVGs</h2>
+  <p class="info">Semantic + Keyboard. SVG and text appear on hover or tabbed</p>
+
+  <div class="svg-container">
+    <svg class="circle-hover" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 300 175">
   
-  Designed by: Allie Martz
-</footer>
+      <text transform="matrix(1 0 0 1 163.4367 89.1606)">
+        <tspan x="8" y="-6">IMPORTANT</tspan>
+        <tspan x="18" y="15">THINGS</tspan>
+      </text>
+    
+      <path class="segment_red" id="segment_r" tabindex="0"  d="M211.559,30.588c14.101,0,26.998,5.213,36.897,13.798l20.178-20.177 c-15.086-13.727-35.12-22.106-57.075-22.106c-22.475,0-42.922,8.796-58.123,23.105l20.132,20.133 C183.6,36.183,196.938,30.588,211.559,30.588z"/>
+    
+      <path class="segment_gold" tabindex="0"  d="M267.959,86.988c0,14.466-5.479,27.673-14.465,37.667l20.143,20.144 c14.135-15.168,22.808-35.491,22.808-57.811c0-23.118-9.301-44.097-24.343-59.421L251.968,47.7 C261.854,57.865,267.959,71.723,267.959,86.988z"/>
+  
+      <path class="segment_green" tabindex="0" d="M211.559,143.389c-15.711,0-29.936-6.463-40.173-16.863l-20.133,20.133 c15.395,15.558,36.741,25.216,60.306,25.216c22.753,0,43.428-9.016,58.685-23.642L250.112,128.1 C240.018,137.571,226.459,143.389,211.559,143.389z"/>
+  
+      <g class="aqua_pieces" tabindex="0">
+        <path class="segment_aqua" tabindex="0" d="M155.158,86.988c0-14.745,5.694-28.18,14.991-38.24l-20.133-20.133 c-14.45,15.227-23.344,35.774-23.344,58.373c0,21.508,8.056,41.16,21.289,56.135l20.179-20.179 C160.037,113.176,155.158,100.642,155.158,86.988z"/>
+        <g class="aqua_over" tabindex="0">
+          <polygon points="128.841,96.714 114.283,86.548 128.841,76.387"/>
+        
+          <path  d="M98.17,64.364l-14.207-0.126c-5.224,0.126-7.164,4.32-7.164,5.76v0.187v0.88l0,19.322 c0,1.327,1.064,2.387,2.317,2.387c1.314,0,2.377-1.06,2.377-2.387l0-16.701h1.97l0,16.021c0,0.253,0.033,0.5,0.063,0.68l0,28.729 c0,1.82,1.436,3.32,3.254,3.32c1.817,0,3.253-1.5,3.253-3.32l0-25.342h1.624l0,25.342c0,1.82,1.443,3.32,3.224,3.32 c1.813,0,3.29-1.5,3.29-3.32l0-29.409V89.58V73.685l1.751,0l0,16.701c0,1.327,1.126,2.387,2.5,2.387 c1.41,0,2.504-1.06,2.504-2.387l0-19.322v-0.88v-0.5C104.925,67.931,102.607,64.364,98.17,64.364z"/>
+        
+          <path d="M90.877,63.238c3.1,0,5.597-2.44,5.597-5.441c0-3.067-2.497-5.567-5.597-5.567 c-3.098,0-5.631,2.5-5.631,5.567C85.246,60.797,87.779,63.238,90.877,63.238z"/>
+        
+          <text x="100" y="135" style=" font-weight: bold;">Friends</text>
+          <text x="100" y="145" ">This is an example of text</text>
+          <text x="100" y="155" >that can appear on rollover</text>
+       </g>
+      </g>
+    </svg>
+  </div>
+</section>
+<!-- End of Accessibile SVG -->
+<!-- Start of Cost Reveal -->
+<section class=" teal cost-reveal-container">
+  <div style="overflow: hidden;">
+    <svg
+      preserveAspectRatio="none"
+      viewBox="0 0 1200 120"
+      xmlns="http://www.w3.org/2000/svg"
+      style="fill: #343234; width: 100%; height: 177px;"
+    >
+      <path
+      d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+      opacity=".25"
+    />
+      <path
+        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+        opacity=".5"
+      />
+      <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+    </svg>
+  </div>
+ 
+</section>
 
 
 <script src="./src/main.js"></script>

@@ -31,6 +31,11 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--font-header);
+
+}
+
 /* 
   End of CSS Reset
 */
@@ -44,6 +49,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --font-header: 'Vollkorn', serif;
   --font-body: 'Quicksand', sans-serif;
 
+  --font-weight-xlight: 300;
   --font-weight-light: 400;
   --font-weight-medium: 500;
   --font-weight-heavy: 600;
@@ -57,6 +63,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
   --yellow-hover:   hsl(44, 100%, 64%);
   --teal-hover: hsl(163, 26%, 57%);
+
+  --red-hover: hsl(11, 71%, 35%);
+
+  --blue-hover: hsl(206, 47%, 63%);
 }
 
 
@@ -304,10 +314,23 @@ section.scroll-animate::before{
   transform-origin: right top;
   transform: skewY(3deg);
   width: 100%;
-  height: 30vh;
+  height: 20vh;
   background-color: var(--color-yellow);
   z-index: -20;
   position: absolute;
+}
+
+section.scroll-animate::after{
+  content: '';
+  display: block;
+  transform-origin: left top;
+  transform: skewY(3deg);
+  width: 100%;
+  height: 9vh;
+  background-color: var(--color-yellow);
+  z-index: -20;
+  position: absolute;
+  bottom: 0;
 }
 
 section.scroll-animate{
@@ -324,8 +347,13 @@ section.scroll-animate{
   font-size: clamp(2.4rem, 3.2vw + 1rem, 3rem);
   color: var(--color-brown);
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-top: 2rem;
+}
+
+.scroll-animate .info {
+  text-align: center;
+  color: var(--color-brown);
 }
 
 /*
@@ -441,8 +469,10 @@ section.scroll-animate{
 
 .step-right-container{
   flex: 1;
-  max-width: 40%;
+  max-width: 45%;
   width: 100%;
+  padding-right: 1rem;
+  padding-left: 0.5rem;
 }
 
 .step-right.block{
@@ -456,6 +486,134 @@ h3.step-heading {
   font-size: clamp(1.8rem, 3.7vw + 0.2rem, 2.5rem);
   margin-bottom: 32px;
   font-family: var(--font-header);
+}
+
+
+/*
+*-----------------------------------
+* SVG Interactive
+*-----------------------------------
+*/
+
+section.svg-wrapper{
+  min-height: 70vh;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.svg-wrapper h2{
+  font-size: clamp(2.4rem, 3.2vw + 1rem, 3rem);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.svg-wrapper .info{
+  text-align: center;
+  font-family: var(--font-body);
+}
+
+.svg-container{
+  padding: 0rem 1rem;
+}
+
+.svg-wrapper text {
+  fill:hsl(37, 63%, 83%);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+ svg.circle-hover{
+  width: 800px;
+  height: 325px;
+  margin-top: 5rem;
+  padding-inline: 2rem;
+}
+
+.segment_red{
+  fill: var(--color-red);
+  cursor:pointer;
+  transition: fill 200ms ease-in;
+  transition: fill 200ms ease-in, transform 200ms ease-in;
+  
+}
+
+.segment_red:hover, .segment_red:focus{
+  fill: var(--red-hover);
+  transform: translateY(-2px);
+  outline: 0;
+}
+
+.segment_gold{
+  cursor:pointer;
+  fill: var(--yellow-hover);
+  transition: fill 200ms ease-in, transform 200ms ease-in;
+}
+
+.segment_gold:hover, .segment_gold:focus{
+  fill: var(--color-yellow);
+  transform: translateX(2px);
+  outline: 0;
+}
+
+
+.segment_green{
+  cursor:pointer;
+  fill: var(--teal-hover);
+  transition: fill 200ms ease-in, transform 200ms ease-in;
+}
+
+.segment_green:hover, .segment_green:focus{
+  transform: translateY(2px);
+  fill:var(--color-teal);
+  outline: 0;
+}
+
+.segment_aqua{
+  cursor:pointer;
+  fill: var(--blue-hover);
+  transition: fill 200ms ease-in, transform 200ms ease-in;
+}
+
+.segment_aqua:focus{
+  outline: 0;
+  fill: var(--color-blue);
+}
+
+.aqua_pieces:hover .segment_aqua {
+  fill: var(--color-blue);
+  transform: translateX(-2px);
+}
+.aqua_pieces:focus .segment_aqua{
+  outline: 0;
+}
+.aqua_pieces .aqua_over {
+  position: absolute !important;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+
+/* Inheriting the display type of segment_aqua */
+.aqua_pieces:hover .aqua_over {
+  display: inherit;
+  opacity: 1;
+}
+
+.aqua_pieces:focus .aqua_over{
+  opacity: 1;
+  outline: 0;
+}
+
+.aqua_over * {
+  fill: var(--color-blue);
+}
+
+.aqua_over text {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  text-anchor: end;
+
 }
 
 /* 
@@ -476,6 +634,11 @@ h3.step-heading {
   fill: var(--color-yellow);
 }
 
+.teal{
+  height: 30vh;
+  width: 100%;
+  background-color: var(--color-teal);
+}
 
 /* 
 * ----------------------------------
@@ -567,8 +730,7 @@ h3.step-heading {
   .step-text{
     font-size: 1rem;
   }
-
-  }
+}
 
   @media (max-width: 520px) {
     .step-text{
