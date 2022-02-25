@@ -480,6 +480,7 @@ section.scroll-animate{
   display: flex;
   align-items: center;
   padding-bottom: 2vh;
+  padding-right: 4vh;
 }
 
 h3.step-heading {
@@ -707,17 +708,27 @@ section.svg-wrapper{
      align-items: flex-end;
    }
 
+   
+
    /*
     * ----------------------------------
-    * Step Styles
+    * Step Styles - Still in Media Query
     * ----------------------------------
     */
 
+  .step-right.block{
+    padding-right: 0;
+    height: 62vh;
+  }
+  .step-left {
+    height: 62vh;
+  }
+  
   .steps-container{
     justify-content: space-around;
   }
   .scroll-animate h2 {
-    /* font-size: 2.2rem; */
+    font-size: 2.2rem;
     margin-top: 3rem;
   }
   h3.step-heading {
@@ -735,5 +746,11 @@ section.svg-wrapper{
   @media (max-width: 520px) {
     .step-text{
       font-size: 0.9rem;
+    }
+  }
+
+  @media(prefers-reduced-motion) {
+    .card-one, .card-two {
+      fadeIn: dissolve;
     }
   }
